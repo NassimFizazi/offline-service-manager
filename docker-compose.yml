@@ -1,0 +1,61 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: plateforme_app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    networks:
+      - plateforme_network
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14
+    container_name: plateforme_db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: plateforme_service_offline
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: votre_mot_de_passe
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - plateforme_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: plateforme_nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    networks:
+      - plateforme_network
+    depends_on:
+      - app
+
+  node:
+    image: node:16
+    container_name: plateforme_node
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    command: tail -f /dev/null
+    networks:
+      - plateforme_network
+
+networks:
+  plateforme_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
