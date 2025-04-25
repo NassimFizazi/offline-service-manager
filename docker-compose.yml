@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     working_dir: /var/www
     volumes:
-      - ./:/var/www
+      - ./backend-laravel:/var/www
     networks:
       - plateforme_network
     depends_on:
@@ -23,7 +23,7 @@ services:
     environment:
       POSTGRES_DB: plateforme_service_offline
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: votre_mot_de_passe
+      POSTGRES_PASSWORD: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
