@@ -3,10 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Reservation extends Model
 {
-    protected $fillable = ['date', 'statut', 'client_id', 'service_id'];
+    use HasFactory;
+
+    protected $fillable = ['client_id', 'service_id', 'date_reservation', 'etat'];
 
     public function client() {
         return $this->belongsTo(Utilisateur::class, 'client_id');
@@ -18,9 +21,5 @@ class Reservation extends Model
 
     public function paiement() {
         return $this->hasOne(Paiement::class);
-    }
-
-    public function avis() {
-        return $this->hasOne(Avis::class);
     }
 }
