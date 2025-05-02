@@ -2,7 +2,7 @@
 
 ## Description
 
-La plateforme de services offline vise à mettre en relation des **clients** à la recherche de services avec des **professionnels** qualifiés (plombiers, menuisiers, électriciens, etc.). Elle permet la réservation, le paiement et la gestion des services en toute sécurité, même sans connexion Internet active, grâce à des fonctionnalités de stockage et de synchronisation des données.
+La plateforme de services offline vise à mettre en relation des **clients** à la recherche de services avec des **professionnels** qualifiés (plombiers, menuisiers, électriciens, etc.). Contrairement à ce que son nom pourrait suggérer, l'accès à la plateforme nécessite une connexion Internet active. Le terme "offline" fait référence au fait que les services proposés ne sont pas en ligne ou virtuels, mais des services physiques fournis par des professionnels.
 
 ## Fonctionnalités Principales
 
