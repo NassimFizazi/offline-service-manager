@@ -1,9 +1,50 @@
 # offline-service-manager
-Description
-The Offline Service Platform is designed to provide seamless service management and functionality, even without an active internet connection. It ensures data storage and synchronization once the user is back online.
 
-Features
-Offline functionality with local data storage.
-Automatic synchronization when online.
-User-friendly interface for easy service management.
-Secure and efficient data handling.
+## Description
+
+La plateforme de services offline vise à mettre en relation des **clients** à la recherche de services avec des **professionnels** qualifiés (plombiers, menuisiers, électriciens, etc.). Elle permet la réservation, le paiement et la gestion des services en toute sécurité, même sans connexion Internet active, grâce à des fonctionnalités de stockage et de synchronisation des données.
+
+## Fonctionnalités Principales
+
+### 1. Gestion des Comptes
+- **Créer un compte** (Utilisateur)
+- **Se connecter** (Utilisateur)
+
+### 2. Gestion des Services
+- **Rechercher un service** (Client)
+- **Réserver un service** (Client)
+- **Annuler une réservation** (Client)
+- **Gérer le rendez-vous** (Client, Professionnel)
+- **Publier un service** (Professionnel)
+- **Gérer les offres (Accepter/Refuser)** (Professionnel)
+- **Consulter les réservations** (Professionnel)
+
+### 3. Feedback et Réclamations
+- **Donner un avis** (Client)
+- **Noter la prestation** (Client)
+- **Déposer une réclamation** (Client)
+- **Gérer les réclamations** (Administrateur)
+
+### 4. Gestion des Paiements
+- **Choisir un mode de paiement** (Client)
+- **Payer en cash** (Client)
+- **Payer par carte** (Client)
+- **Recevoir les paiements** (Professionnel)
+- **Gérer les remboursements** (Administrateur)
+
+### 5. Administration
+- **Gérer les clients et professionnels** (Administrateur)
+- **Valider les services proposés** (Administrateur)
+- **Gérer les paiements et transactions** (Administrateur)
+
+## Objectifs
+- Faciliter la mise en relation entre **clients** et **professionnels**.
+- Gérer les **réservations, paiements et feedbacks**.
+- Assurer la **validation des services** et la gestion des transactions.
+- Proposer un **système de gestion des réclamations et remboursements**.
+
+## Acteurs
+- **Client** : Recherche un service, réserve et paye une prestation.
+- **Professionnel** : Propose des services et gère les demandes.
+- **Administrateur** : Supervise et gère la plateforme.
+- **Utilisateur** : Rôle générique englobant **Client** et **Professionnel**.
